@@ -14,7 +14,8 @@ var argv = require('optimist')
     'k': 'keyword',
     'o': 'output',
     'V': 'version',
-    'D': 'directory'
+    'D': 'directory',
+    'c': 'comment'
   })
   .describe({
     'directory': 'add directory to list for input files search',
@@ -23,12 +24,14 @@ var argv = require('optimist')
     'keyword': 'xgettext-style list of keywords to be looked for',
     'force-po': 'write PO file even if empty',
     'version': 'output version information and exit',
-    'no-location': 'don\'t write location information'
+    'no-location': 'don\'t write location information',
+    'comment': 'leading comment character'
   })
   .default({
     'from-code': 'ascii',
     'keyword': '_,gettext',
-    'force-po': false
+    'force-po': false,
+    'comment': '_'
   })
   .check(function (argv) {
     argv['from-code'] = argv['from-code'].toLowerCase().replace(/\W/g, '');
