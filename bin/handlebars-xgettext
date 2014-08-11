@@ -20,14 +20,14 @@ var argv = require('optimist')
     'directory': 'add directory to list for input files search',
     'output': 'write output to specified file',
     'from-code': 'encoding of input files',
-    'keyword': 'additional keyword to be looked for',
+    'keyword': 'xgettext-style list of keywords to be looked for',
     'force-po': 'write PO file even if empty',
     'version': 'output version information and exit',
     'no-location': 'don\'t write location information'
   })
   .default({
     'from-code': 'ascii',
-    'keyword': ['gettext', '_'],
+    'keyword': '_,gettext',
     'force-po': false
   })
   .check(function (argv) {
