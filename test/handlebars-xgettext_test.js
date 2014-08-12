@@ -89,8 +89,17 @@ exports.INPUT = {
 
       test.done();
     });
-  }
+  },
+  // 'comments': function(test) {
+  //   test.expect(1);
+  //   parse('test/fixtures/comment.hbs', null, function(po) {
+  //     var context = gt.po.parse(po).translations[''];
+  //     test.equal(context.string.comments.translator, 'comment', 'Result should contain comment');
+  //     test.done();
+  //   });
+  // }
 };
+
 exports.PARAMETER = {
   'directory': function (test) {
     test.expect(1);

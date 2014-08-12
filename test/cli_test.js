@@ -93,8 +93,8 @@ exports.cli = {
 
     child.stdout.setEncoding('utf8');
 
-    child.stdout.on('data', function () {
-      throw 'There should not be any output';
+    child.stdout.on('data', function (data) {
+      throw 'There should not be any output, got ' + data;
     });
 
     child.stderr.on('data', function (err) {
